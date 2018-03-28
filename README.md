@@ -1,8 +1,8 @@
-# movies
-Safaricom Backend test
 [![Build Status](https://travis-ci.com/bdhobare/movies.svg?token=fWDtLxfqsFps4n9z5XgB&branch=master)](https://travis-ci.com/bdhobare/movies)
+
 #Description
-This Spring boot project shows simple CRUD operations with a REST API
+This Spring boot project shows simple CRUD operations with a REST API and CI integration with Travis CI
+
 #Building
 1. Install [Grails](http://grails.org/download.html).Grails is used to provide the `json-views` needed to render json with HAL
 
