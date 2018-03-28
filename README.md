@@ -1,9 +1,15 @@
 [![Build Status](https://travis-ci.com/bdhobare/movies.svg?token=fWDtLxfqsFps4n9z5XgB&branch=master)](https://travis-ci.com/bdhobare/movies)
 
 # Description
+
 This Spring boot project shows simple CRUD operations with a REST API and CI integration with Travis CI
 
 It also shows Authentication using Spring Security
+
+Travis CI deploys the code to Google Cloud Platform(GCE)
+
+#Test Link
+ I have deployed the application to [http://saf.beatbox.co.ke/](http://saf.beatbox.co.ke/) with Travis for testing
 
 # Sample output
 
