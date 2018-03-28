@@ -3,6 +3,8 @@
 # Description
 This Spring boot project shows simple CRUD operations with a REST API and CI integration with Travis CI
 
+It also shows Authentication using Spring Security
+
 # Building
 
 1. Install [Grails](http://grails.org/download.html).Grails is used to provide the `json-views` needed to render json with HAL
