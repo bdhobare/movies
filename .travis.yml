@@ -4,10 +4,9 @@ php:
 - openjdk8
 before_install:
 - chmod +x gradlew
-- openssl aes-256-cbc -K $encrypted_544ddaa54e49_key -iv $encrypted_544ddaa54e49_iv
-- in laplace.enc -out ~\/.ssh/laplace -d
+- openssl aes-256-cbc -K $encrypted_544ddaa54e49_key -iv $encrypted_544ddaa54e49_iv in laplace.enc -out ~\/.ssh/laplace -d
 before_script:
-- sudo apt-get update
+- sudo apt-get -qq update
 - sudo apt-get -y install unzip
 - sudo apt-get -y install curl
 - curl -s "https://get.sdkman.io" | bash

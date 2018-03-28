@@ -49,8 +49,10 @@ This uses Spring Security
 
 All the unit tests are under *src/test*
 
+The two tests check if login is working and that a movie can be saved with the correct entities or can't otherwise.
+
 # CI and CD with Travis
-The repository is integrated with Travis CI. The two tests check if login is working and that a movie can be saved with the correct entities or can't otherwise.
+The repository is integrated with Travis CI. The configuration file can be found at `.travis.yml`
 
 Once a user commits to the master branch, Travis runs the automated tests and if they succeed it deploy it 
 with the `deploy.sh` file.
