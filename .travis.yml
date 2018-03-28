@@ -1,22 +1,19 @@
-language: php
+language: java
 php:
-- 7.1
-addons:
-  postgresql: 9.6
-services:
-- postgresql
+- openjdk8
 before_script:
-- cp .env.travis .env
-- sudo apt-get -qq update
-- sudo apt-get install -y postgresql-9.6-postgis-2.4
-- psql -c 'create database iziaddress_test;' -U postgres
-- psql -U postgres -d iziaddress_test -c 'create extension postgis'
-- composer self-update
-- composer install --no-interaction
-- php artisan key:generate
+- openssl aes-256-cbc -K $encrypted_544ddaa54e49_key -iv $encrypted_544ddaa54e49_iv
+- in laplace.enc -out ~\/.ssh/laplace -d
+- sudo add-apt-repository -y ppa:groovy-dev/grails
+- sudo apt-get update
+- sudo apt-get -y install unzip
+- sudo apt-get -y install curl
+- curl -s "https://get.sdkman.io" | bash
+- source "$HOME/.sdkman/bin/sdkman-init.sh"
+- sdk install grails
 - echo -e "Host beatbox.co.ke\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 script:
-- vendor/bin/phpunit
+- grails test-app
 - cd $TRAVIS_BUILD_DIR
 - chmod +x ./deploy.sh
 deploy:
@@ -25,14 +22,9 @@ deploy:
   on:
    branch: master
   skip_cleanup: true
-#after_success: "./.travis/deploy.sh"
-before_install:
-- openssl aes-256-cbc -K $encrypted_75310dc6db60_key -iv $encrypted_75310dc6db60_iv
-  -in travis.enc -out travis -d
 notifications:
   email:
     recipients:
       - bdhobare@gmail.com
-      - miles@iziaddress.com
     on_success: change # default: change
     on_failure: change # default: always
