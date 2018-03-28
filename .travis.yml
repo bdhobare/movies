@@ -1,6 +1,9 @@
+install: gradle wrapper --gradle-version 3.5
 language: java
 php:
 - openjdk8
+before_install:
+- chmod +x gradlew
 before_script:
 - openssl aes-256-cbc -K $encrypted_544ddaa54e49_key -iv $encrypted_544ddaa54e49_iv
 - in laplace.enc -out ~\/.ssh/laplace -d
