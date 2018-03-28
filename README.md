@@ -8,7 +8,7 @@ It also shows Authentication using Spring Security
 
 Travis CI deploys the code to Google Cloud Platform(GCE)
 
-#Test Link
+# Test Link
  I have deployed the application to [http://saf.beatbox.co.ke/](http://saf.beatbox.co.ke/) with Travis for testing
 
 # Sample output
