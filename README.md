@@ -5,7 +5,7 @@ This Spring boot project shows simple CRUD operations with a REST API and CI int
 
 It also shows Authentication using Spring Security
 
-#Sample output
+# Sample output
 
 This was taken using Postman
 ![1.png](https://github.com/bdhobare/movies/blob/master/1.png)
