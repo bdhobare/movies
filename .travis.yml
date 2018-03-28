@@ -1,6 +1,6 @@
 install: gradle wrapper --gradle-version 3.5
 language: java
-php:
+java:
 - openjdk8
 before_install:
 - chmod +x gradlew
