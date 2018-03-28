@@ -5,6 +5,13 @@ This Spring boot project shows simple CRUD operations with a REST API and CI int
 
 It also shows Authentication using Spring Security
 
+#Sample output
+
+This was taken using Postman
+![1.png](https://github.com/bdhobare/movies/blob/master/1.png)
+
+![2.png](https://github.com/bdhobare/movies/blob/master/2.png)
+
 # Building
 
 1. Install [Grails](http://grails.org/download.html).Grails is used to provide the `json-views` needed to render json with HAL
