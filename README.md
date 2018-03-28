@@ -4,11 +4,12 @@
 This Spring boot project shows simple CRUD operations with a REST API and CI integration with Travis CI
 
 # Building
+
 1. Install [Grails](http://grails.org/download.html).Grails is used to provide the `json-views` needed to render json with HAL
 
-2.clone this repository and open it in IntelliJ
+2. clone this repository and open it in IntelliJ
 
-3.Open a terminal and make sure you `cd` to the project root
+3. Open a terminal and make sure you `cd` to the project root
 
 4. Run `grails run-app` and open [http://localhost:8080/](http://localhost:8080/)
 
@@ -17,7 +18,7 @@ This uses Spring Security
 
 1. POST: `/api/login`.The default credentials are `{"username": "user", "password": "pass"}`.The header `Accept: application/json`
 
-2. You will get an authorization token from the above step. Pass it ass a header the the following subsequent API calls
+2. You will get an authorization token from the above step. Pass it as a header in the following subsequent API calls
 `Authorization: Bearer <Access_Token>`
 
 # Create
@@ -38,6 +39,7 @@ This uses Spring Security
                                     }`
                               
 # READ
+
 1. GET :`/api/movies/1`
 2. To get all the movies: GET: `api/movies`
 
@@ -54,7 +56,7 @@ The two tests check if login is working and that a movie can be saved with the c
 # CI and CD with Travis
 The repository is integrated with Travis CI. The configuration file can be found at `.travis.yml`
 
-Once a user commits to the master branch, Travis runs the automated tests and if they succeed it deploy it 
+Once a user commits to the master branch, Travis runs the automated tests and if they succeed it deploys it 
 with the `deploy.sh` file.
 
 The `deploy.sh` file simply pushes the code to the server.
